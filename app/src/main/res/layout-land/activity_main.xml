@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/mountains" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@android:color/background_light"
+                android:padding="16dp"
+                android:src="@drawable/rockpoint_logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingLeft="56dp"
+                android:paddingTop="16dp"
+                android:text="RockPoint a.s."
+                android:textColor="@android:color/background_light"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <View style="@style/HorizontalLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    style="@style/Icon"
+                    android:onClick="showOnMap"
+                    android:src="@drawable/ic_place_black_24dp" />
+
+                <TextView
+                    style="@style/InfoText"
+                    android:onClick="showOnMap"
+                    android:text="Americká 2796/54\n301 00 Plzeň\nCzech Republic" />
+
+            </LinearLayout>
+
+            <View style="@style/HorizontalLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    style="@style/Icon"
+                    android:onClick="phoneCall"
+                    android:src="@drawable/ic_phone_black_24dp" />
+
+                <TextView
+                    android:id="@+id/phone"
+                    style="@style/InfoText"
+                    android:onClick="phoneCall"
+                    android:text="+420 379 200 777" />
+
+            </LinearLayout>
+
+            <View style="@style/HorizontalLine" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <ImageView
+                    style="@style/Icon"
+                    android:onClick="showWebPage"
+                    android:src="@drawable/ic_public_black_24dp" />
+
+                <TextView
+                    android:id="@+id/web_page"
+                    style="@style/InfoText"
+                    android:onClick="showWebPage"
+                    android:text="www.rockpoint.cz" />
+
+            </LinearLayout>
+
+            <View style="@style/HorizontalLine" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
